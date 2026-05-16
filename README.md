@@ -1,45 +1,57 @@
-<<<<<<< HEAD
-# RAG Chatbot Project
+# 📄 RAG PDF Chatbot
 
-## Overview
-This project is a Retrieval-Augmented Generation (RAG) chatbot developed using Streamlit, FAISS, HuggingFace embeddings, and Transformers. The chatbot allows users to upload PDF documents and ask questions based on the uploaded content.
+An AI-powered RAG (Retrieval-Augmented Generation) chatbot built using Streamlit, FAISS, HuggingFace Embeddings, and Transformers.
 
 ## Features
+
 - Upload PDF documents
-- Extract text from PDFs
-- Split text into chunks
-- Store embeddings using FAISS
-- Retrieve relevant content
-- Generate answers using AI model
-- Interactive Streamlit interface
+- Ask questions from uploaded PDFs
+- Semantic search using FAISS
+- AI-generated responses
+- Simple and interactive UI
 
 ## Technologies Used
+
 - Python
 - Streamlit
-- LangChain
 - FAISS
 - HuggingFace Embeddings
 - Transformers
 - PyPDF2
 
+## Project Structure
+
+```text
+RAG_CHATBOT/
+│
+├── app.py
+├── chat.py
+├── ingest.py
+├── vector_store.py
+├── requirements.txt
+├── README.md
+│
+├── data/
+├── screenshots/
+```
+
 ## How to Run
 
-Install required packages:
-
 ```bash
-python -m pip install -r requirements.txt
-=======
-# RAG_CHATBOT
-RAG-based PDF Chatbot using Streamlit, FAISS, HuggingFace Embeddings, and Transformers
->>>>>>> 43cbbc0b186ae61ba2fb237925f8a70c5cbde64d
+python -m streamlit run app.py
+```
 
 ## Screenshots
 
-### Chatbot Interface
-![Chatbot Output](screenshots/chatbot_output.png)
+### Chatbot Output
+![Chatbot](screenshots/chatbot_output.png)
 
-### Terminal Execution
+### Terminal Output
 ![Terminal](screenshots/terminal_output.png)
 
-### Code Implementation
+### Code Structure
 ![Code](screenshots/code_implementation.png)
+
+## Author
+
+Hema Jyothsna
