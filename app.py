@@ -4,8 +4,17 @@ from ingest import process_pdf
 from vector_store import create_vector_store
 from chat import get_answer
 
+#sidebar
+st.sidebar.title("RAG chatbot")
+st.sidebar.write(
+    "AI-powered PDF Question Answering System"
+)
+
 st.set_page_config(page_title="RAG Chatbot")
-st.title("🤖 PDF Chatbot")
+st.title("📄 RAG PDF Chatbot")
+st.markdown(
+    "Upload a PDF and aask questions based on the document."
+)
 
 uploaded_file = st.file_uploader(
     "Upload your PDF",
@@ -13,6 +22,7 @@ uploaded_file = st.file_uploader(
 )
 
 if uploaded_file:
+    st.success(f"Uploaded: {uploaded_file.name}")
 
     chunks = process_pdf(uploaded_file)
 
@@ -33,11 +43,13 @@ if uploaded_file:
         )
 
         context = context[:500]
-
-        answer = get_answer(
+        
+        with st.spinner("Generating aanswer..."):            
+          answer = get_answer(
             context,
             user_question
         )
 
+        st.success("PDF uploaded successfully!")
         st.write("### Answer")
-        st.write(answer)
+        st.info(answer)
