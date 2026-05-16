@@ -32,3 +32,14 @@ python -m pip install -r requirements.txt
 # RAG_CHATBOT
 RAG-based PDF Chatbot using Streamlit, FAISS, HuggingFace Embeddings, and Transformers
 >>>>>>> 43cbbc0b186ae61ba2fb237925f8a70c5cbde64d
+
+## Screenshots
+
+### Chatbot Interface
+![Chatbot Output](screenshots/chatbot_output.png)
+
+### Terminal Execution
+![Terminal](screenshots/terminal_output.png)
+
+### Code Implementation
+![Code](screenshots/code_implementation.png)
